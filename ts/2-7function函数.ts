@@ -10,7 +10,7 @@ function add(x: number,y: number,z?: number): number {
 }
 
 //调用后的赋值的bobo也是number
-let bobo = add(1,2)
+let result = add(1,2)
 
 // add(1,2,3) 应有 2 个参数，但获得 3 个。 定义了几个就要传几个 也可使用？做可选
 
@@ -19,12 +19,15 @@ let bobo = add(1,2)
 //直接声明一个函数类型
 
 let add2 :(x: number,y: number,z?:number)=> number = add
+//=>不是箭头函数 是TS中声明函数返回类型
+//：后边都是在声明类型 与实迹代码逻辑无关
 
 //使用interface声明一个函数类型
 
 interface ISum {
     (x: number,y: number,z?: number): number
 }
+//interface里声明函数返回类型不使用=>，而是使用：+ 类型
 
 let add3: ISum = add
 

@@ -31,22 +31,22 @@ interface RadioWithBattery extends Radio {
     checkBatterystatus(): void
 }
 
-class Car implements Radio {
-    switchRadio(trigger: Boolean) {
+class Car implements Radio{
+    switchRadio(trigger: Boolean){
 
     }
 }
 
-class Cellphone implements Radio, Battery {
-    switchRadio(trigger: boolean) {
+class Cellphone implements Radio, Battery{
+    switchRadio(trigger: boolean){
 
     }
-    checkBatterystatus() {
+    checkBatterystatus(){
 
     }
 }
 
-class Cellphones3 implements RadioWithBattery {
+class Cellphones2 implements RadioWithBattery {
     switchRadio(trigger: boolean) {
 
     }

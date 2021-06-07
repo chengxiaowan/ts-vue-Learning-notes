@@ -22,7 +22,8 @@ let info: Person = {
 // }
 
 
-//不能将类型“{ name: string; age: number; id: number; }”分配给类型“Person”。对象文字可以只指定已知属性，并且“id”不在类型“Person”中。
+//不能将类型“{ name: string; age: number; id: number; }”分配给类型“Person”。
+// 对象文字可以只指定已知属性，并且“id”不在类型“Person”中。
 // let infos: Person = {
 //     name:"drool",
 //     age:18,
@@ -50,3 +51,4 @@ let datas: Persons = {
 //readonly 只读属性
 
 // data.id = 20  无法分配到 "id" ，因为它是只读属性。
+// 类似const const作用于变量 readonly作用于属性

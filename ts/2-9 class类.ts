@@ -8,18 +8,22 @@
 //面向对象（OOP）：封装，继承，多态。
 //封装方法，只暴露接口  子类继承父类  继承产生类对同样的方法的不同相应
 
-//TS中的类
-//三种访问修饰符
-//Public：修饰的属性或者方法时共有的 可以在任意地方被调用
+//TS中的类 
+//三种访问修饰符  给类上的属性进行权限管理
+//Public：修饰的属性或者方法时共有的 可以在任意地方被调用 默认
 //Private：修饰的属性或方法是私有的 不能再声明他的类外部调用
 //Protected：修饰的属性或者方法是受保护的
 
 class Animal {
-    name: string;
+    readonly name: string;
     constructor (name) {
         this.name = name
     };
-    run() {
+   private run() {
         return `${this.name} is runing`
     }
 }
+
+const snake = new Animal("lily")
+// console.log(snake.run())
+// snake.name=
